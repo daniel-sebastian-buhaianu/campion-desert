@@ -15,8 +15,7 @@ int main()
 }
 float desert(int n)
 {
-	if (n == 1) return 100*K/P;
-	if (n == 2) return 200*K/P;
-	return 100*K/(P*(2*n-3)) + desert(n-1);
+	if (n <= 2) return (float)n*((100*K)/P);
+	return (float)(100*K)/(P*(2*n-3)) + desert(n-1);
 }
-// scor 10
+// scor 50
